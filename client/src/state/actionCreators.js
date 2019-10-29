@@ -14,3 +14,16 @@ export const getPosts = () => dispatch => {
         console.log(err)
     })
 }
+
+export const deletePost = (id) => dispatch => {
+    axios.delete(`http://localhost:5000/api/posts/${id}`)
+    .then(res => {
+       dispatch({
+           type: types.DELETE_POST,
+           payload: res.data.id
+       })
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}

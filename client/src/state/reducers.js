@@ -10,6 +10,10 @@ export function postsReducer(state = initState, action) {
       return {
         posts: action.payload
       };
+      case types.DELETE_POST:
+          return {...state.posts, posts: state.posts.filter(post => {
+              return post.id !== JSON.parse(action.payload)
+          })}
     default:
       return state;
   }

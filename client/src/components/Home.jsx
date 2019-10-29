@@ -16,7 +16,7 @@ const StyledBlogPost = styled.div`
     padding: 2rem;
 `;
 
-export function Home({getPosts, posts}){
+export function Home({getPosts, posts, deletePost}){
     useEffect(() => {
         getPosts()
     }, [getPosts])
@@ -34,7 +34,7 @@ export function Home({getPosts, posts}){
                         <h3>{post.title}</h3>
                         <p>{post.contents}</p>
                         <p>{post.created_at}</p>
-                        <button>Delete Post</button>
+                        <button onClick={() => deletePost(post.id)}>Delete Post</button>
                     </StyledBlogPost>
                 )
             })}
