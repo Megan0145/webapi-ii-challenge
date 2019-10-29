@@ -27,3 +27,13 @@ export const deletePost = (id) => dispatch => {
         console.log(err)
     })
 }
+
+export const getPostComments = (id) => dispatch => {
+    axios.get(`http://localhost:5000/api/posts/${id}/comments`)
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
