@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getPosts = () => dispatch => {
   axios
-    .get("http://localhost:5000/api/posts")
+    .get("http://localhost:5000/api/posts/")
     .then(res => {
       console.log(res.data);
       dispatch({
@@ -29,6 +29,16 @@ export const deletePost = id => dispatch => {
       console.log(err);
     });
 };
+
+export const addPost = (post) => dispatch => {
+    axios.post("http://localhost:5000/api/posts/", post)
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
 
 // export const getPostComments = (id) => dispatch => {
 //     axios.get(`http://localhost:5000/api/posts/${id}/comments`)

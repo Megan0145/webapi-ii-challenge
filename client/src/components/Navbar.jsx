@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, Route } from 'react-router-dom';
 import Home from './Home';
 import AddComment from './AddComment';
+import CreatePost from './CreatePost';
 
 export function Navbar(props){
     return(
@@ -14,6 +15,7 @@ export function Navbar(props){
            <main>
                <Route exact path='/' component={Home} />
                <Route exact path='/addcomment/:id' component={AddComment} />
+               <Route exact path='/createpost' component={CreatePost}/>
            </main>
         </div>
     );

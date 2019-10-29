@@ -17,7 +17,6 @@ export function Post({ post, deletePost }) {
 
   return (
     <div>
-      Blog post
       <h3>{post.title}</h3>
       <p>{post.contents}</p>
       <p>{post.created_at}</p>

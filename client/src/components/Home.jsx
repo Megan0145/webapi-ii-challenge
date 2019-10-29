@@ -26,7 +26,7 @@ export function Home({ getPosts, posts, deletePost, getPostComments }) {
 
   return (
     <StyledContainer>
-      <h1>All Blog Posts</h1>
+      <h1>All Posts</h1>
       {posts.map(post => {
         return (
           <StyledBlogPost key={post.id}>
