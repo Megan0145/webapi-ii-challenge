@@ -13,7 +13,7 @@ export function Navbar(props){
            </nav>
            <main>
                <Route exact path='/' component={Home} />
-               <Route exact path='/addcomment' component={AddComment} />
+               <Route exact path='/addcomment/:id' component={AddComment} />
            </main>
         </div>
     );

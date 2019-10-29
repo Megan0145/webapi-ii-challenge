@@ -29,14 +29,14 @@ export function Post({ post, deletePost }) {
         Add a Comment
       </button>
       <div>
-        <h3>Comments</h3>
+        <h3>{comments.length} Comments</h3>
         {comments.length
           ? comments.map(comment => (
               <div key={comment.id}>
                 <p>{comment.text}</p>
               </div>
             ))
-          : null}
+          : <p>Be the first to comment</p>}
       </div>
     </div>
   );
